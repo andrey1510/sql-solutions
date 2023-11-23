@@ -100,6 +100,13 @@ GROUP BY hd
 HAVING COUNT(pc.model) >= 2;
 
 
+-- 17. 
+
+SELECT p.type, p.model, l.speed   
+FROM Product p 
+JOIN Laptop l ON p.model = l.model 
+WHERE l.speed < (SELECT MIN(pc.speed) FROM PC pc)
+
 
 /*
 Схема БД состоит из четырех таблиц:
