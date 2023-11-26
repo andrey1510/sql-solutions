@@ -108,6 +108,26 @@ JOIN Laptop l ON p.model = l.model
 WHERE l.speed < (SELECT MIN(pc.speed) FROM PC pc)
 
 
+-- 18.
+
+SELECT p.maker, pr.price 
+FROM Product p 
+JOIN Printer pr ON p.model = pr.model 
+WHERE pr.color = 'y' 
+ORDER BY pr.color 
+LIMIT 1
+
+
+-- 19.
+
+SELECT p.maker, AVG(l.screen) AS average_screen_size
+FROM Product p
+JOIN Laptop l ON p.model = l.model
+GROUP BY p.maker
+
+
+
+
 /*
 Схема БД состоит из четырех таблиц:
 Product(maker, model, type)
