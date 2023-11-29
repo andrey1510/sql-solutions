@@ -126,6 +126,14 @@ JOIN Laptop l ON p.model = l.model
 GROUP BY p.maker
 
 
+-- 21.
+
+SELECT pr.maker, MAX(p.price) 
+FROM Product pr 
+JOIN PC p ON pr.model = p.model 
+GROUP BY pr.maker
+
+
 
 
 /*
