@@ -133,6 +133,14 @@ FROM Product pr
 JOIN PC p ON pr.model = p.model 
 GROUP BY pr.maker
 
+-- 22.
+
+SELECT speed, AVG(price) AS Avg_price
+FROM PC
+WHERE speed > 600
+GROUP BY speed;
+
+
 
 
 

@@ -1,0 +1,12 @@
+
+-- https://www.w3resource.com/sql-exercises/sql-boolean-operator-exercise-7.php
+
+SELECT salesman_id, name, city, commission 
+FROM salesman 
+WHERE commission > 0.10 AND commission < 0.12; 
+
+-- https://www.w3resource.com/sql-exercises/sql-boolean-operator-exercise-8.php
+
+SELECT * 
+FROM orders 
+WHERE purch_amt < 200 OR NOT (ord_date >= '2012-02-10' AND customer_id < 3009);
